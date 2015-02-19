@@ -75,4 +75,4 @@ if (fs.existsSync(path.resolve(__dirname, 'local.js'))){
 /**************************************************************************
  * Export config
  *************************************************************************/
-module.exports = environment;
+module.exports = defaults;
