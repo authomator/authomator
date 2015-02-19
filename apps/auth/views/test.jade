@@ -1,0 +1,121 @@
+extends layout
+block content
+  
+    .paper(style='margin: 20px; padding: 20px')
+      
+      h1(style='background-color: rgba(0,0,0,0.1); padding: 20px 0px') Typografy
+      
+      h1 h1. Heading 1
+      
+      h2 h2. Heading 2
+      
+      h3 h3. Heading 3
+      
+      h4 h4. Heading 4
+      
+      h5 h5. Heading 5
+      
+      h6 h6. Heading 6
+      
+      p This is some normal body text in p tags
+      
+      
+      
+      h1(style='background-color: rgba(0,0,0,0.1); padding: 20px 0px; margin-top: 40px') Form
+      
+      form(method='post' action='/auth/local')
+        input(type='text', name='email', placeholder='email')
+        input(type='password', name='password', placeholder='password')
+      
+        
+        
+      h1(style='background-color: rgba(0,0,0,0.1); padding: 20px 0px; margin-top: 40px') Buttons (flat)
+      div(style='display: flex; flex-direction: row; justify-content: space-between;')
+        
+        div
+          p
+            a.flat-button(href="#") BUTTON
+            | &nbsp; a.flat-button
+            
+            
+          p 
+            a.flat-button.disabled(href="#") BUTTON
+            | &nbsp; a.flat-button.disabled;
+            
+          
+          p
+            a.flat-button.primary(href="#") BUTTON
+            | &nbsp; a.flat-button.primary
+          
+          p
+            a.flat-button.secondary(href="#") BUTTON
+            | &nbsp; a.flat-button.secondary &nbsp;
+            
+        
+        div
+          p
+            a.flat-button.not-padded(href="#") BUTTON
+            | &nbsp; a.flat-button.not-padded
+
+
+          p
+            a.flat-button.not-padded.isabled(href="#") BUTTON
+            | &nbsp; a.flat-button.not-padded.disabled;
+
+
+          p
+            a.flat-button.not-padded.primary(href="#") BUTTON
+            | &nbsp; a.flat-button.not-padded.primary
+
+          p
+            a.flat-button.not-padded.secondary(href="#") BUTTON
+            | &nbsp; a.flat-button.not-padded.secondary &nbsp;
+          
+          
+        div
+          p
+            button.flat-button BUTTON
+            | &nbsp; button.flat-button 
+        
+          p
+            button.flat-button.disabled BUTTON
+            | &nbsp; button.flat-button.disabled
+
+          p
+            button.flat-button.primary BUTTON
+            | &nbsp; button.flat-button.primary
+          
+          p
+            button.flat-button.secondary BUTTON
+            | &nbsp; button.flat-button.secondary
+          
+          
+      h1(style='background-color: rgba(0,0,0,0.1); padding: 20px 0px; margin-top: 40px') Buttons (raised)
+      div(style='display: flex; flex-direction: row; justify-content: space-between;')
+        div
+          p
+            a.raised-button(href="#") BUTTON
+            | &nbsp; a.raised-button
+          p
+            a.raised-button.disabled(href="#") BUTTON
+            | &nbsp; a.raised-button.disabled;
+          p
+            a.raised-button.primary(href="#") BUTTON
+            | &nbsp; a.raised-button.primary
+          p
+            a.raised-button.secondary(href="#") BUTTON
+            | &nbsp; a.raised-button.secondary &nbsp;
+          
+        div
+          p
+            button.raised-button(href="#") BUTTON
+            | &nbsp; button.raised-button
+          p
+            button.raised-button.disabled(href="#") BUTTON
+            | &nbsp; button.raised-button.disabled;
+          p
+            button.raised-button.primary(href="#") BUTTON
+            | &nbsp; button.raised-button.primary
+          p
+            button.raised-button.secondary(href="#") BUTTON
+            | &nbsp; button.raised-button.secondary &nbsp;

@@ -1,0 +1,20 @@
+input {
+  border: none;
+  border-bottom: 1px solid @border-color;
+  width: 100%;
+  display: block;
+  font-size: 16px;
+  font-weight: 300;
+  height: 32px;
+  margin-top: 50px;
+  color: @dark-black;
+
+  &:focus {
+    outline: -webkit-focus-ring-color none;
+    outline-color: none;
+    outline-style: none;
+    outline-width: 0;
+    color: @dark-black;
+    border-bottom: 2px solid @blue-500;
+  }
+}

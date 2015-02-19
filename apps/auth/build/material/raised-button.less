@@ -1,0 +1,54 @@
+.raised-button {
+
+  .font-style-button;
+  
+  &, * { .ease-out(); }
+  
+  display: inline-block;
+  min-width: @button-min-width;
+  height: @button-height;
+  border-radius: 1px;
+  padding: 0 24px;
+  user-select: none;
+  line-height: @button-height;
+  
+  background-color: @raised-button-color;
+  color: @raised-button-text-color;
+  box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.14);
+  
+  &.disabled {
+    background-color: @raised-button-disabled-color;
+    color: @raised-button-disabled-text-color;
+
+    &:hover {
+      background-color: @raised-button-disabled-color;
+    }
+  }
+  
+  &:hover {
+    background-color: @raised-button-hover-color;
+  }
+
+  &.primary {
+      background-color: @raised-button-primary-color;
+      color: @raised-button-primary-text-color;
+
+    &:hover {
+      background-color: @raised-button-primary-hover-color;
+    }
+  }
+
+  &.secondary {
+    background-color: @raised-button-secondary-color;
+    color: @raised-button-secondary-text-color;
+
+    &:hover {
+        background-color: @raised-button-secondary-hover-color;
+    }
+  }
+}
+
+
+a.raised-button {
+  text-decoration: none;
+}

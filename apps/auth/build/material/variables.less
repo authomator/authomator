@@ -1,0 +1,52 @@
+// Feel free to change this file to customize your app.
+// This is place to put any variable overrides as well.
+
+//Typography
+@headingFontFamily: 'Roboto', sans-serif;
+@contentFontFamily: 'Roboto', sans-serif;
+
+//App Colors
+@primary-1-color: @light-green-500;
+@primary-2-color: @light-green-700;
+@primary-3-color: @light-green-100;
+@accent-1-color: @light-blue-A200;
+@accent-2-color: @light-blue-A400;
+@accent-3-color: @light-blue-A100;
+
+//Text Colors
+@body-text-color: @dark-black;
+
+//Border Colors
+@border-color: @grey-300;
+
+//Component Colors
+@canvas-color: @white;
+
+//Disabled Colors
+@disabled-color: fade(@body-text-color, 30%);
+
+// Button
+@button-height: 36px;
+@button-min-width: 88px;
+
+@flat-button-color: @white;
+@flat-button-hover-color: darken(@flat-button-color, 10%);
+@flat-button-text-color: @body-text-color;
+@flat-button-primary-hover-color: lighten(@accent-1-color, 32%);
+@flat-button-primary-text-color: @accent-1-color;
+@flat-button-secondary-hover-color: lighten(@primary-1-color, 32%);
+@flat-button-secondary-text-color: @primary-1-color;
+@flat-button-disabled-text-color: fade(@flat-button-text-color, 30%);
+
+
+@raised-button-color: @white;
+@raised-button-hover-color: darken(@raised-button-color, 10%);
+@raised-button-text-color: @body-text-color;
+@raised-button-primary-color: @accent-1-color;
+@raised-button-primary-hover-color: darken(@accent-1-color, 15%);
+@raised-button-primary-text-color: @white;
+@raised-button-secondary-color: @primary-1-color;
+@raised-button-secondary-hover-color: darken(@primary-1-color, 4%);
+@raised-button-secondary-text-color: @white;
+@raised-button-disabled-color: @raised-button-hover-color;
+@raised-button-disabled-text-color: fade(@raised-button-text-color, 30%);
