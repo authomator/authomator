@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server.js",
     "server:watch": "nodemon server.js",
-    "test": "node_modules/mocha/bin/mocha --ui bdd --reporter spec './lib/**/*.spec.js'",
+    "test": "node_modules/mocha/bin/mocha --ui bdd --reporter spec $(find ./lib ./config ./apps -name '*.spec.js')",
     "test:watch": "nodemon --exec npm run test"
   },
   "dependencies": {
