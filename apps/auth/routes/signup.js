@@ -12,8 +12,8 @@ router
     
     .post('/sign-up', function(req,res,next){
 
-        req.assert('firstname', 'Firstname required').notEmpty();
-        req.assert('lastname', 'Lastname required').notEmpty();
+        req.assert('firstName', 'First name required').notEmpty();
+        req.assert('lastName', 'Last name required').notEmpty();
         req.assert('email', 'Email address required').notEmpty();
         req.assert('email', 'Valid email required').isEmail();
         req.assert('password', 'Password must be 6 to 20').len(6, 20);
@@ -26,16 +26,16 @@ router
                 .render('signup.jade', {
                     validationError: true,
                     errors: errors,
-                    firstname: req.body.firstname,
-                    lastname: req.body.lastname,
+                    firstName: req.body.firstName,
+                    lastName: req.body.lastName,
                     email: req.body.email
                 });
         }
         
 
         var user = new User({
-            firstname: req.body.firstname,
-            lastname: req.body.lastname,
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
             email: req.body.email
         });
         user._auth.local = req.body.password;
@@ -51,8 +51,8 @@ router
                             .render('signup.jade', {
                                 validationError: true,
                                 errors: [{msg: 'Email is already registered'}],
-                                firstname: req.body.firstname,
-                                lastname: req.body.lastname,
+                                firstName: req.body.firstName,
+                                lastName: req.body.lastName,
                                 email: req.body.email
                             });
                     }
