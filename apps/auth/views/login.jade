@@ -1,15 +1,9 @@
 extends layout
 block content
-  
   .auth-wrapper
     .paper-wrapper
-      
-      if validationError
-        .paper.error
-          h4 Invalid parameters received
-          ul
-            for error in errors
-              li= error.msg
+
+      include partials/validation
         
       if invalidCredentials
         .paper.error.shake

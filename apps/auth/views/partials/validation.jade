@@ -1,0 +1,6 @@
+if validationError
+  .paper.error
+    h4 Invalid parameters received
+    ul
+    for error in errors
+      li= error.msg
