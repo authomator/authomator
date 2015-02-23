@@ -37,6 +37,7 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
  *************************************************************************/
 app.use(routes.login);
 app.use(routes.signup);
+app.use(routes.forgot);
 
 
 /**************************************************************************
