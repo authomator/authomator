@@ -1,0 +1,14 @@
+extends layout
+block content
+  .auth-wrapper
+    .paper-wrapper
+      .paper.forgot
+        h3 Forgot password
+        form(method='post' action='#{settings.baseUrl}/forgot')
+          input(type='hidden', name='_csrf', value=_csrf)
+          input(type='text', name='email', placeholder='Enter your email address', value=email)
+          p.help Please enter your email address above and we will send you a password reset link.
+            
+          .main-buttons
+            a.flat-button(href='#{settings.baseUrl}/login') Cancel
+            button.raised-button.secondary(type="submit") Submit

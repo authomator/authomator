@@ -745,17 +745,25 @@ html {
 .auth-wrapper .paper-wrapper .login,
 .auth-wrapper .paper-wrapper .register,
 .auth-wrapper .paper-wrapper .error,
-.auth-wrapper .paper-wrapper .tos {
+.auth-wrapper .paper-wrapper .tos,
+.auth-wrapper .paper-wrapper .forgot {
   width: 360px;
 }
 .auth-wrapper .paper-wrapper .login,
-.auth-wrapper .paper-wrapper .register {
+.auth-wrapper .paper-wrapper .register,
+.auth-wrapper .paper-wrapper .forgot {
   margin-top: 20px;
   padding: 30px 20px 5px 20px;
 }
 .auth-wrapper .paper-wrapper .login h3,
-.auth-wrapper .paper-wrapper .register h3 {
+.auth-wrapper .paper-wrapper .register h3,
+.auth-wrapper .paper-wrapper .forgot h3 {
   text-align: center;
+}
+.auth-wrapper .paper-wrapper .login .help,
+.auth-wrapper .paper-wrapper .register .help,
+.auth-wrapper .paper-wrapper .forgot .help {
+  margin-top: 25px;
 }
 .auth-wrapper .paper-wrapper .error {
   margin-top: 20px;
@@ -783,6 +791,10 @@ html {
   -ms-justify-content: flex-end;
   justify-content: flex-end;
   margin-top: 50px;
+}
+.auth-wrapper .paper-wrapper .main-buttons button,
+.auth-wrapper .paper-wrapper .main-buttons a {
+  margin-left: 20px;
 }
 .auth-wrapper .paper-wrapper .secondary-buttons {
   display: -webkit-flex;
@@ -830,7 +842,8 @@ html {
   .auth-wrapper .paper-wrapper .login,
   .auth-wrapper .paper-wrapper .register,
   .auth-wrapper .paper-wrapper .error,
-  .auth-wrapper .paper-wrapper .tos {
+  .auth-wrapper .paper-wrapper .tos,
+  .auth-wrapper .paper-wrapper .forgot {
     width: 280px;
   }
 }

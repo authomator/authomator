@@ -13,5 +13,6 @@ var router = require('express').Router();
 
 module.exports = exports = {
     login: require('./login'),
-    signup: require('./signup')
+    signup: require('./signup'),
+    forgot: require('./forgot')
 }

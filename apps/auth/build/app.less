@@ -24,16 +24,20 @@ html {
     .flex-direction(column);
     .justify-content(center);
 
-    .login, .register, .error, .tos {
+    .login, .register, .error, .tos, .forgot {
       width: @paper-width-lg;
     }
     
-    .login, .register {
+    .login, .register, .forgot {
       margin-top: 20px;
       padding: 30px 20px 5px 20px;
 
       h3 {
         text-align: center;
+      }
+
+      .help {
+        margin-top: 25px;
       }
     }
 
@@ -55,6 +59,9 @@ html {
       .flex-direction(row);
       .justify-content(flex-end);
       margin-top: 50px;
+      button, a{
+        margin-left: 20px;
+      }
     }
 
     .secondary-buttons {
@@ -101,7 +108,7 @@ html {
   
   .auth-wrapper {
     .paper-wrapper {
-      .login, .register, .error, .tos {
+      .login, .register, .error, .tos, .forgot {
         width: @paper-width-sm;
       }    
     }
