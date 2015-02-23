@@ -2,7 +2,8 @@
 @import "material/colors";
 @import "flexbox";
 
-@paper-width: 360px;
+@paper-width-lg: 360px;
+@paper-width-sm: 280px;
 
 html {
   background: url('../img/background.png') no-repeat center center fixed;
@@ -23,6 +24,32 @@ html {
     .flex-direction(column);
     .justify-content(center);
 
+    .login, .register, .error, .tos {
+      width: @paper-width-lg;
+    }
+    
+    .login, .register {
+      margin-top: 20px;
+      padding: 30px 20px 5px 20px;
+
+      h3 {
+        text-align: center;
+      }
+    }
+
+    .error {
+      margin-top: 20px;
+      padding-bottom: 20px;
+      &.shake {
+        -webkit-animation: shake .6s linear;
+      }
+    }
+
+    .tos {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
     .main-buttons {
       .flex-display();
       .flex-direction(row);
@@ -36,37 +63,13 @@ html {
       .justify-content(space-between);
       margin-top: 30px;
     }
-
-    .login, .register {
-      width: @paper-width;
-      margin-top: 20px;
-      padding: 30px 20px 5px 20px;
-
-      h3 {
-        text-align: center;
-      }
-    }
-
-    .error {
-      width: @paper-width;
-      margin-top: 20px;
-      padding-bottom: 20px;
-      &.shake {
-        -webkit-animation: shake .6s linear;
-      }
-    }
-
-    .tos {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      width: @paper-width;
-    }
-
+    
   }
+  
 }
 
 
-/* also need keyframes and -moz-keyframes */
+// Login failed animation
 @-webkit-keyframes shake {
   8%, 41% {
     -webkit-transform: translateX(-10px);
@@ -84,3 +87,24 @@ html {
     -webkit-transform: translateX(0);
   }
 }
+
+// Responsive behaviour
+@media only screen and(max-width: 640px) {
+
+  html {
+    background: none;
+    background-color: @accent-1-color;
+  }
+}
+
+@media only screen and(max-width: 400px) {
+  
+  .auth-wrapper {
+    .paper-wrapper {
+      .login, .register, .error, .tos {
+        width: @paper-width-sm;
+      }    
+    }
+  }
+}
+
