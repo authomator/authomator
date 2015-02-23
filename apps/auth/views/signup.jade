@@ -1,26 +1,27 @@
 extends layout
 block content
-  .login-wrapper
-    if validationError
-      .paper.error
-        h4 Invalid parameters received
-        ul
-          for error in errors
-            li= error.msg
-    .paper.register
-      h3 Sign Up
-      form(method='post' action='#{settings.baseUrl}/sign-up')
-        input(type='hidden', name='_csrf', value=_csrf)
-        input(type='text', name='firstName', placeholder='Enter your first name', value=firstName)
-        input(type='text', name='lastName', placeholder='Enter your last name', value=lastName)
-        input(type='text', name='email', placeholder='Enter your email address', value=email)
-        input(type='password', name='password', placeholder='Enter your password')
-        .main-buttons
-          button.raised-button.secondary(type="submit") Sign Up
-        .secondary-buttons
-          a.flat-button.not-padded(type="submit", href='#{settings.baseUrl}/login') Login
-          a.flat-button.not-padded(type="submit", href='#{settings.baseUrl}/reset') Forgot password
-      
-    .paper.inverted.tos
-      p.small
-        | By clicking Sign Up, you agree to the Terms of Service and Privacy Policy.
+  .auth-wrapper
+    .paper-wrapper
+      if validationError
+        .paper.error
+          h4 Invalid parameters received
+          ul
+            for error in errors
+              li= error.msg
+      .paper.register
+        h3 Sign Up
+        form(method='post' action='#{settings.baseUrl}/sign-up')
+          input(type='hidden', name='_csrf', value=_csrf)
+          input(type='text', name='firstName', placeholder='Enter your first name', value=firstName)
+          input(type='text', name='lastName', placeholder='Enter your last name', value=lastName)
+          input(type='text', name='email', placeholder='Enter your email address', value=email)
+          input(type='password', name='password', placeholder='Enter your password')
+          .main-buttons
+            button.raised-button.secondary(type="submit") Sign Up
+          .secondary-buttons
+            a.flat-button.not-padded(type="submit", href='#{settings.baseUrl}/login') Login
+            a.flat-button.not-padded(type="submit", href='#{settings.baseUrl}/reset') Forgot password
+        
+      .paper.inverted.tos
+        p.small
+          | By clicking Sign Up, you agree to the Terms of Service and Privacy Policy.
