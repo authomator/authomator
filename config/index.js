@@ -16,6 +16,10 @@ var defaults =  {
         port: vars.port
     },
 
+    reset : {
+        expiresInMinutes: 60
+    },
+    
     redirects : {
         httpsOnly: false,
         acceptDomains: ['127.0.0.1'],
