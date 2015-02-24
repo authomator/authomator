@@ -13,11 +13,24 @@ var defaults =  {
 
     server: {
         listen: vars.listen,
-        port: vars.port
+        port: vars.port,
+        url: 'http://127.0.0.1'
     },
 
+    // Reset password settings
     reset : {
-        expiresInMinutes: 60
+        expiresInMinutes: 60 // time after which the reset token will expire
+    },
+    
+    mail : {
+        from: 'authomater@local',
+        transport: {
+            service: 'Mandrill',
+            auth: {
+                user: 'some@email.be',
+                pass: 'someapikey'
+            }
+        }
     },
     
     redirects : {

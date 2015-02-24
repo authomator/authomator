@@ -11,7 +11,8 @@ var express = require('express'),
     middleware = require('./lib/middleware'),
     redirector = require('./lib/redirector'),
     auth = require('./apps/auth/app'),
-    api = require('./apps/api/app');
+    api = require('./apps/api/app'),
+    mail = require('./lib/mail');
 
 /**************************************************************************
  * CREATE MAIN EXPRESS APP
@@ -58,6 +59,12 @@ redirector()
  * MONGODB SETUP
  *************************************************************************/
 mongoose.setup(config);
+
+
+/**************************************************************************
+ * NODEMAILER SETUP
+ *************************************************************************/
+mail.transport(config.mail.transport);
 
 /**************************************************************************
  * LOAD EXPRESS APPS AS MIDDLEWARE
