@@ -1,0 +1,12 @@
+extends ../layout
+block content
+  .auth-wrapper
+    .paper-wrapper
+      .paper.reset.error
+        h3 Invalid password reset link
+        .invalid-link
+            img(src='#{settings.baseUrl}/public/img/cross-invalid-link.svg')
+        p.help The link you followed to reset the password is invalid or has expired. Please revisit the forgot password page to send a new reset link
+            
+        .main-buttons
+          a.flat-button.not-padded(href='#{settings.baseUrl}/forgot') Resend email

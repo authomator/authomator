@@ -24,18 +24,18 @@ html {
     .flex-direction(column);
     .justify-content(center);
 
-    .login, .register, .error, .tos, .forgot {
+    .login, .register, .error, .tos, .forgot, .reset {
       width: @paper-width-lg;
     }
     
-    .login, .register, .forgot {
+    .login, .register, .forgot, .reset {
       margin-top: 20px;
       padding: 30px 20px 5px 20px;
 
       h3 {
         text-align: center;
       }
-      .email-sent {
+      .email-sent, .invalid-link {
         .flex-display();
         .flex-direction(row);
         .justify-content(center);
@@ -43,6 +43,11 @@ html {
           margin-top: 25px;
           margin-bottom: 25px;
           padding-right: 10px;
+        }
+      }
+      .invalid-link {
+        img {
+          padding-right: 0px;
         }
       }
       .help {
