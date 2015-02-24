@@ -6,7 +6,8 @@
 var express = require('express'),
     routes = require('./routes'),
     lusca = require('lusca'),
-    path = require('path');
+    path = require('path'),
+    errorHandling = require('./errorHandling');
 
 var app = module.exports = express();
 
@@ -44,5 +45,4 @@ app.use(routes.reset);
 /**************************************************************************
  * ERROR HANDLING MIDDLEWARE
  *************************************************************************/
-
-// Would be nice to have here !!
+app.use(errorHandling);

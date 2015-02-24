@@ -1,6 +1,9 @@
 extends layout
-
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+  .auth-wrapper
+    .paper-wrapper
+      .paper.reset.error.shake
+        h3= title
+        .invalid-link
+            img(src='#{settings.baseUrl}/public/img/cross-invalid-link.svg')
+        p.help.center= message
