@@ -4,7 +4,8 @@
 
 
 var express = require('express'),
-    routes = require('./routes');
+    routes = require('./routes'),
+    cors = require('cors');
 
 var app = module.exports = express();
 
@@ -18,7 +19,7 @@ app.disable('etag');
 /**************************************************************************
  * APPLICATION SPECIFIC middleware.
  *************************************************************************/
-
+app.use(cors({origin: true, credentials: true}));
 
 /**************************************************************************
  * Routes
