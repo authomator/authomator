@@ -1,0 +1,18 @@
+extends ../layout
+block content
+  .auth-wrapper
+    .paper-wrapper
+      
+      include ../partials/validation
+        
+      .paper.reset
+        h3 Reset password
+        form(method='post' action='#{settings.baseUrl}/reset')
+          input(type='hidden', name='_csrf', value=_csrf)
+          input(type='hidden', name='_token', value=token)
+          input(type='password', name='password', placeholder='Enter your password')
+          input(type='password', name='password_confirm', placeholder='Enter your password again')
+            
+          .main-buttons
+            a.flat-button(href='#{settings.baseUrl}/login') Cancel
+            button.raised-button.secondary(type="submit") Submit

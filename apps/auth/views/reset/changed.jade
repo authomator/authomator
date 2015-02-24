@@ -1,0 +1,12 @@
+extends ../layout
+block content
+  .auth-wrapper
+    .paper-wrapper
+      .paper.forgot
+        h3 Password changed
+        .email-sent
+            img(src='#{settings.baseUrl}/public/img/thumb-up.svg')
+        p.help Super, your password was successfully changed ! If you want to continue to the application click the login button underneath.
+            
+        .main-buttons
+          a.raised-button.secondary(href='#{settings.baseUrl}/login') Login

@@ -887,7 +887,7 @@ html {
 @media only screen and (max-width: 640px) {
   html {
     background: none;
-    background-color: #40c4ff;
+    background-color: #00b0ff;
   }
 }
 @media only screen and (max-width: 400px) {
