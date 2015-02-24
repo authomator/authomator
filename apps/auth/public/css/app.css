@@ -557,6 +557,9 @@ input:focus {
   border-radius: 2px;
   padding: 0px 20px;
 }
+.paper ::selection {
+  background: #8bc34a;
+}
 .paper.inverted {
   background-color: #000000;
 }
@@ -581,8 +584,13 @@ input:focus {
 .paper.error h5,
 .paper.error h6,
 .paper.error a,
-.paper.error li {
+.paper.error li,
+.paper.error button {
   color: #ffffff;
+  background-color: transparent;
+}
+.paper.error ::selection {
+  background: #dd2c00;
 }
 button {
   border: none;
@@ -705,7 +713,7 @@ a.raised-button {
 }
 
 html {
-  background: url('../img/background.png') no-repeat center center fixed;
+  background: url('../img/background.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -746,23 +754,31 @@ html {
 .auth-wrapper .paper-wrapper .register,
 .auth-wrapper .paper-wrapper .error,
 .auth-wrapper .paper-wrapper .tos,
-.auth-wrapper .paper-wrapper .forgot {
+.auth-wrapper .paper-wrapper .forgot,
+.auth-wrapper .paper-wrapper .reset {
   width: 360px;
 }
 .auth-wrapper .paper-wrapper .login,
 .auth-wrapper .paper-wrapper .register,
-.auth-wrapper .paper-wrapper .forgot {
+.auth-wrapper .paper-wrapper .forgot,
+.auth-wrapper .paper-wrapper .reset {
   margin-top: 20px;
   padding: 30px 20px 5px 20px;
 }
 .auth-wrapper .paper-wrapper .login h3,
 .auth-wrapper .paper-wrapper .register h3,
-.auth-wrapper .paper-wrapper .forgot h3 {
+.auth-wrapper .paper-wrapper .forgot h3,
+.auth-wrapper .paper-wrapper .reset h3 {
   text-align: center;
 }
 .auth-wrapper .paper-wrapper .login .email-sent,
 .auth-wrapper .paper-wrapper .register .email-sent,
-.auth-wrapper .paper-wrapper .forgot .email-sent {
+.auth-wrapper .paper-wrapper .forgot .email-sent,
+.auth-wrapper .paper-wrapper .reset .email-sent,
+.auth-wrapper .paper-wrapper .login .invalid-link,
+.auth-wrapper .paper-wrapper .register .invalid-link,
+.auth-wrapper .paper-wrapper .forgot .invalid-link,
+.auth-wrapper .paper-wrapper .reset .invalid-link {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -779,14 +795,26 @@ html {
 }
 .auth-wrapper .paper-wrapper .login .email-sent img,
 .auth-wrapper .paper-wrapper .register .email-sent img,
-.auth-wrapper .paper-wrapper .forgot .email-sent img {
+.auth-wrapper .paper-wrapper .forgot .email-sent img,
+.auth-wrapper .paper-wrapper .reset .email-sent img,
+.auth-wrapper .paper-wrapper .login .invalid-link img,
+.auth-wrapper .paper-wrapper .register .invalid-link img,
+.auth-wrapper .paper-wrapper .forgot .invalid-link img,
+.auth-wrapper .paper-wrapper .reset .invalid-link img {
   margin-top: 25px;
   margin-bottom: 25px;
   padding-right: 10px;
 }
+.auth-wrapper .paper-wrapper .login .invalid-link img,
+.auth-wrapper .paper-wrapper .register .invalid-link img,
+.auth-wrapper .paper-wrapper .forgot .invalid-link img,
+.auth-wrapper .paper-wrapper .reset .invalid-link img {
+  padding-right: 0px;
+}
 .auth-wrapper .paper-wrapper .login .help,
 .auth-wrapper .paper-wrapper .register .help,
-.auth-wrapper .paper-wrapper .forgot .help {
+.auth-wrapper .paper-wrapper .forgot .help,
+.auth-wrapper .paper-wrapper .reset .help {
   margin-top: 25px;
 }
 .auth-wrapper .paper-wrapper .error {
