@@ -760,6 +760,30 @@ html {
 .auth-wrapper .paper-wrapper .forgot h3 {
   text-align: center;
 }
+.auth-wrapper .paper-wrapper .login .email-sent,
+.auth-wrapper .paper-wrapper .register .email-sent,
+.auth-wrapper .paper-wrapper .forgot .email-sent {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+.auth-wrapper .paper-wrapper .login .email-sent img,
+.auth-wrapper .paper-wrapper .register .email-sent img,
+.auth-wrapper .paper-wrapper .forgot .email-sent img {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-right: 10px;
+}
 .auth-wrapper .paper-wrapper .login .help,
 .auth-wrapper .paper-wrapper .register .help,
 .auth-wrapper .paper-wrapper .forgot .help {

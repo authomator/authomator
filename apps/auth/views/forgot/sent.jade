@@ -1,0 +1,12 @@
+extends ../layout
+block content
+  .auth-wrapper
+    .paper-wrapper
+      .paper.forgot
+        h3 Email sent
+        .email-sent
+            img(src='#{settings.baseUrl}/public/img/email.svg')
+        p.help An email has been sent with password reset instructions. Click below to return to the login page.
+            
+        .main-buttons
+          a.raised-button.secondary(href='#{settings.baseUrl}/login') Back

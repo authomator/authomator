@@ -1,7 +1,14 @@
-extends layout
+extends ../layout
 block content
   .auth-wrapper
     .paper-wrapper
+      
+      include ../partials/validation
+      if notRegisteredError
+        .paper.error
+          h4 Unknown email address
+          p This email is not registered here, please check that you did not make a typo.
+        
       .paper.forgot
         h3 Forgot password
         form(method='post' action='#{settings.baseUrl}/forgot')
